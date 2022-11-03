@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
+import Player from './Components/Player';
+import Lyrics from './Components/Lyrics';
+import lines from './lyrics-lines.js'
+
+
+
+
 
 const App = () => {
+
+  const [activeLine, setActiveLine] = useState(5)
+
   return (
     <div className="container">
-      <header>
-        <div className="logo" />
-        <h1>Webová aplikace</h1>
-      </header>
-      <main>
-        <p>
-          Startovací šablona pro webovou aplikaci v Reactu. Vytvořeno pomocí
-          <a href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>
-          .
-        </p>
-      </main>
-      <footer>
-        <p>Czechitas, Digitální akademie: Web</p>
-      </footer>
+      
+      <Player src = 'fools-garden-lemon-tree.mp3' />
+      <Lyrics lines = {lines}  />
+
     </div>
   );
 };
