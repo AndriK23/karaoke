@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import playButton  from '../../assets/play-icon.svg'
-import pauseButton from '../../assets/pause-icon.svg'
 import './style.css';
 import { useRef, useEffect } from 'react';
 
