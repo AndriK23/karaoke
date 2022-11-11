@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 
 
-const Lyrics = ( {lines , activeLine } ) => {
+const Lyrics = ( {lines, currentLineIndex}  ) => {
     
-    console.log(lines)
-    
-    
-   
+    // console.log(lines.length);
+    console.log("currentLineIndex");
+    console.log(currentLineIndex);
+        
+
 
     return(
         <div> 
 
-        {lines.map( (line, index) => {return <p key = {index} className = 'current-line' >  {line.text} </p> } )}  
+        {lines.map( (line, index) => { return ( 
+        <div key = {index} > 
+        <p className = { currentLineIndex === index ? 'current-line' : ''} > {line.text} </p>         
+        </div>
+        )  }   )}  
         
         </div> 
     )

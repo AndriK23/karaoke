@@ -11,13 +11,17 @@ import lines from './lyrics-lines.js'
 
 const App = () => {
 
-  const [activeLine, setActiveLine] = useState(5)
+  const [currentLineIndex, setActiveLine] = useState(5)
+  
+  console.log(currentLineIndex);
+
+ 
 
   return (
     <div className="container">
       
       <Player src = 'fools-garden-lemon-tree.mp3' />
-      <Lyrics lines = {lines}  />
+      <Lyrics lines = {lines} currentLineIndex = {currentLineIndex} />
 
     </div>
   );
